@@ -1,6 +1,6 @@
 project(tester)
 
-
+find_package(GTest REQUIRED)
 ####################################
 # create test bin target
 ####################################
@@ -14,7 +14,7 @@ if(MSVC)
   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 endif()
 
-add_subdirectory(gtest)
+# add_subdirectory(gtest)
 
 
 ####################################
@@ -44,7 +44,7 @@ target_sources(lucene++-tester
 ####################################
 target_include_directories(lucene++-tester
   PUBLIC
-    $<BUILD_INTERFACE:${googletest_SOURCE_DIR}/googletest/include>
+    # $<BUILD_INTERFACE:${googletest_SOURCE_DIR}/googletest/include>
     $<BUILD_INTERFACE:${Boost_INCLUDE_DIRS}>
     $<BUILD_INTERFACE:${lucene++_SOURCE_DIR}/include/lucene++>
     $<BUILD_INTERFACE:${lucene++_BINARY_DIR}/include>
@@ -66,8 +66,8 @@ target_link_libraries(lucene++-tester
     Boost::system
     Boost::thread
     ZLIB::ZLIB
-    gtest_main
-    gtest
+    GTest::gtest_main
+    GTest::gtest
     
     lucene++::lucene++
     lucene++::lucene++-contrib)

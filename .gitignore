@@ -82,4 +82,5 @@ src/test/CMakeFiles/
 src/test/CTestTestfile.cmake
 src/test/Makefile
 src/test/cmake_install.cmake
-
+.idea/
+cmake-build-debug/
