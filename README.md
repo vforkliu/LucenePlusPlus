@@ -69,3 +69,12 @@ Acknowledgements
 - md5 Copyright (C) 1999, 2000, 2002 Aladdin Enterprises
 - `Unicode character properties (guniprop)[http://library.gnome.org/devel/glib/] Copyright (C) 1999 Tom Tromey, Copyright (C) 2000 Red Hat, Inc.
 - `Cotire (compile time reducer)[https://github.com/sakra/cotire] by Sascha Kratky.
+
+
+How to build
+-----------
+
+```bash
+sudo apt install libboost-all-dev
+sudo apt install libgtest-dev
+```
